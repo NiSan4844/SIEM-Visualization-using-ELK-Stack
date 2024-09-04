@@ -150,23 +150,23 @@ This visualization tracks users added or removed from a local group, focusing on
   ![image](https://github.com/user-attachments/assets/494d3143-8963-4271-9973-276e7d33d33e)
 
 4. Create a Table visualization with the following fields:
-   - `user.name.keyword` (Username)
+   - `user.name.keyword` (User performing the action)
 
       ![image](https://github.com/user-attachments/assets/a483c91b-e23e-42ac-9854-bc4a3cd766d5)
 
-   - `winlog.event_data.MemberSid.keyword`
+   - `winlog.event_data.MemberSid.keyword` (User added)
 
       ![image](https://github.com/user-attachments/assets/f3695c0b-c7b7-4181-9a92-deac1a84ca1b)
 
-   - `group.name.keyword`
+   - `group.name.keyword` (Group modified)
 
       ![image](https://github.com/user-attachments/assets/847fb790-22d2-407c-9f44-dc7babb15ce4)
      
-   - `event.action.keyword`
+   - `event.action.keyword` (Action performed)
 
       ![image](https://github.com/user-attachments/assets/fa4d843d-6939-4da6-b75d-0c8f2bab4f6b)
 
-   - `host.hostname.keyword` (Hostname)
+   - `host.hostname.keyword` (Action performed on)
 
       ![image](https://github.com/user-attachments/assets/c1091142-e922-4068-80ec-d691643efd94)
 
