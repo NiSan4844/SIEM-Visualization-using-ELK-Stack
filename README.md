@@ -94,11 +94,3 @@ To use these visualizations:
 1. Follow the step-by-step instructions for each example to set up the visualizations in your Kibana Dashboard.
 2. Customize the time range and filters as per your environment and requirements.
 3. Monitor the dashboards regularly to detect and respond to security events.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request to suggest improvements or add new visualizations.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
