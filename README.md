@@ -36,13 +36,38 @@ This visualization captures all failed logon attempts across all users.
 1. Navigate to the Kibana Dashboard and click on "Create new dashboard".
 2. Set the time filter to "Last 15 years".
 3. Apply a filter for Event ID `4625` to capture failed logon attempts.
+
+![image](https://github.com/user-attachments/assets/c1f04d10-806c-41b5-93bf-2d617f23b2a1)
+
 4. Set the index pattern to `windows*`.
+
+![image](https://github.com/user-attachments/assets/2e47bdef-000d-41c4-9c33-a9cf69ce7a66)
+
+
 5. Create a Table visualization with the following fields:
    - `user.name.keyword` (Username)
+
+![image](https://github.com/user-attachments/assets/d43085da-19a6-4d51-ac62-d049c9958b24)
+
+
    - `host.hostname.keyword` (Hostname)
+
+![image](https://github.com/user-attachments/assets/5d737fe3-01bf-4f9a-a01d-cc79dbf6c717)
+
+   - `winlog.logon.type,keyword` (Logon Type)
+
+![image](https://github.com/user-attachments/assets/b2e549d9-c393-4c0c-9071-3b6e2cebf2f3)
+
+   - Under metrics use `Count` 
+
+![image](https://github.com/user-attachments/assets/4cb5e48d-45e8-49ab-b242-c5b97c787a1e)
+
 6. Add the following filters:
    - Exclude specific machine accounts like `DESKTOP-DPOESND`, `WIN-OK9BH1BCKSD`, `WIN-RMMGJA7T9TC`.
    - Exclude computer accounts using the KQL query `NOT user.name: *$ AND winlog.channel.keyword: Security`.
+
+![image](https://github.com/user-attachments/assets/37e6b53b-8eb3-4fb5-a30d-bfa48d115490)
+
 7. Save the visualization and add it to the dashboard.
 
 ### Failed Logon Attempts (Disabled Users)
